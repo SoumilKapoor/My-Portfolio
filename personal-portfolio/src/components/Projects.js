@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import Alumnet from "../assets/img/Alumnet.png";
+import Alista from "../assets/img/Alista.png";
+import Sonair from "../assets/img/Sonair.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,11 +11,26 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Alumnet : School's Private Network",
+      description: "Django|Python|Tailwind|Next.js",
+      imgUrl: Alumnet,
     },
     {
+      title: "Velora : Shopping District",
+      description: "React|Stripe|ASP.NET|PostgreSQL",
+      imgUrl: Alumnet,
+    },
+    {
+      title: "Sonair : Hands-free Listening",
+      description: "Numpy|Tensorflow|MediaPipe|OS APIs|Python",
+      imgUrl: Sonair,
+    },
+    {
+      title: "Alista : Personal Assistant",
+      description: "Next.js|Node.js|LLM APIs|Prisma ORM|NextAuth|Docker",
+      imgUrl: Alista,
+    },
+    {/*{
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
@@ -24,22 +39,7 @@ export const Projects = () => {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    }*/},
   ];
 
   return (
@@ -52,9 +52,7 @@ export const Projects = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Projects</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    A selection of projects that showcase my skills in building modern, responsive, and scalable applications. Each project reflects my approach to clean code, thoughtful design, and real-world problem solving.
                   </p>
 
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -91,15 +89,13 @@ export const Projects = () => {
 
                       <Tab.Pane eventKey="second">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Cumque quam, quod neque provident velit.
+                          More projects are on the way. If you have an opportunity or an idea we can build together, feel free to get in touch.
                         </p>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="third">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                          Cumque quam, quod neque provident velit.
+                          Innovation loading… ⏳
                         </p>
                       </Tab.Pane>
                     </Tab.Content>

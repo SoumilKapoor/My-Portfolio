@@ -71,11 +71,11 @@ export const Banner = () => {
 
                   <h1>Soumil Kapoor</h1>
 
-                  <h2 className="FSW">
+                  <h2>
                     <span className="wrap">{text}</span>
                   </h2>
 
-                  <p>
+                  <p className="FSW">
                     I’m a Full-Stack Developer who transforms ideas into
                     powerful web applications. From intuitive user interfaces
                     to robust backend systems, I build complete solutions that
