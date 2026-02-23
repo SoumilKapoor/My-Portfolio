@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -11,14 +11,19 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-  const toRotate = ["Full-stack Developer", "Web Designer", "AI Enthusiast"];
+  // ✅ Memoized so it doesn't change every render
+  const toRotate = useMemo(
+    () => ["Full-stack Developer", "Web Designer", "AI Enthusiast"],
+    []
+  );
+
   const period = 2000;
 
   const tick = useCallback(() => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
+    const i = loopNum % toRotate.length;
+    const fullText = toRotate[i];
 
-    let updatedText = isDeleting
+    const updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
 
