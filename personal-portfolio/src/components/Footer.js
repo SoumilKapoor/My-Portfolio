@@ -10,20 +10,46 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
+          
           <MailchimpForm />
-          <Col size={12} sm={6}>
+
+          <Col xs={12} sm={6}>
             <img src={logo} alt="Logo" />
           </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+
+          <Col xs={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon1} alt="LinkedIn" />
+              </a>
+
+              <a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon2} alt="GitHub" />
+              </a>
+
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon3} alt="Instagram" />
+              </a>
+
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>© {new Date().getFullYear()} Sam Kapoor. All Rights Reserved.</p>
           </Col>
+
         </Row>
       </Container>
     </footer>
-  )
-}
+  );
+};
