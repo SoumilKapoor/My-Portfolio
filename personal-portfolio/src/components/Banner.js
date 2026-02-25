@@ -107,10 +107,10 @@ export const Banner = () => {
                       : ""
                   }
                 >
-                  <img
+                  {/*<img
                     src={headerImg}
                     alt="Developer Illustration"
-                  />
+                  />*/}
                 </div>
               )}
             </TrackVisibility>
